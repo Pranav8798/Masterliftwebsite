@@ -1,0 +1,204 @@
+/* Masterlift Website - Final Balanced Layout */
+/* Hinglish comments included for clarity */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff7cc, #f9d8ff);
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.title-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.title-text p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tagline {
+  margin-top: 1rem;
+  background: #fceaff;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.tagline h2 {
+  color: #6c2eb9;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+/* NAV ICONS */
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.icon-card {
+  background: #ffefb8;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-card:hover {
+  background: #ffe37c;
+  transform: translateY(-3px);
+}
+
+/* MAIN CONTENT */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* INDIVIDUAL CARD */
+.content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE + TEXT WRAPPER */
+.content-inner {
+  display: flex;
+  align-items: center; /* Vertically center image and text */
+  justify-content: flex-start;
+  gap: 1.8rem;
+  width: 100%;
+}
+
+/* IMAGE STYLE */
+.thumb img {
+  width: 230px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT STYLE */
+.text {
+  flex: 1; /* ensures equal spacing for text */
+  text-align: left;
+}
+
+.text h3 {
+  color: #b430f0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.text p {
+  color: #444;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  background: #6c2eb9;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE FIXES */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .content-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text {
+    text-align: left;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .icon-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .text h3 {
+    font-size: 1.1rem;
+  }
+
+  .tagline h2 {
+    font-size: 1.1rem;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: auto;
+  }
+}
